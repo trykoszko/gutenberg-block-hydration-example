@@ -1,0 +1,27 @@
+{
+	"name": "gutenberg-user-card",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Gutenberg User Card",
+	"author": "Gutenberg User Card",
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"WordPress",
+		"block"
+	],
+	"homepage": "https://gitlab.com/michal.trykoszko/gutenberg-user-card",
+	"repository": "git+https://gitlab.com/michal.trykoszko/gutenberg-user-card.git",
+	"bugs": {
+		"url": "https://gitlab.com/michal.trykoszko/gutenberg-user-card/issues"
+	},
+	"main": "build/index.js",
+	"devDependencies": {
+		"@wordpress/scripts": "^7.1.1"
+	},
+	"scripts": {
+		"build": "wp-scripts build",
+		"format:js": "wp-scripts format-js",
+		"lint:js": "wp-scripts lint-js",
+		"start": "wp-scripts start"
+	}
+}
