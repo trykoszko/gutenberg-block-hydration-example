@@ -19,9 +19,9 @@
 		"@wordpress/scripts": "^7.1.1"
 	},
 	"scripts": {
-		"build": "wp-scripts build",
+		"build": "wp-scripts build ./src/index.js ./src/front.js",
 		"format:js": "wp-scripts format-js",
 		"lint:js": "wp-scripts lint-js",
-		"start": "wp-scripts start"
+		"start": "wp-scripts start ./src/index.js ./src/front.js"
 	}
 }

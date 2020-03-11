@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/front.js");
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -243,9 +243,9 @@ function UserCard(props) {
 
 /***/ }),
 
-/***/ "./src/index.js":
+/***/ "./src/front.js":
 /*!**********************!*\
-  !*** ./src/index.js ***!
+  !*** ./src/front.js ***!
   \**********************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -254,67 +254,28 @@ function UserCard(props) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
-/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @wordpress/blocks */ "@wordpress/blocks");
-/* harmony import */ var _wordpress_blocks__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-dom */ "react-dom");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _component_src_UserCard__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../component/src/UserCard */ "./component/src/UserCard.js");
 
 
 
 
-var Component = wp.element.Component;
+window.addEventListener('DOMContentLoaded', function () {
+  var cards = document.querySelectorAll('.mt-block-user-card');
 
-var block = function block(props) {
-  var attributes = props.attributes;
-  return Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])("div", {
-    className: "mt-block-user-card",
-    "data-mt-attributes": JSON.stringify(attributes)
-  }, Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_component_src_UserCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
-    attributes: attributes
-  }));
-};
-
-console.log(wp);
-Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("mt/gutenberg-user-card", {
-  title: Object(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__["__"])("User card", "gutenberg-user-card"),
-  icon: "universal-access-alt",
-  category: "layout",
-  attributes: {
-    firstName: {
-      type: "string",
-      default: "John"
-    },
-    lastName: {
-      type: "string",
-      default: "Doe"
-    },
-    desc: {
-      type: "string",
-      default: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum at ipsum quis leo ullamcorper congue id tincidunt ante. Pellentesque ut ex pellentesque elit commodo pulvinar luctus ac tortor."
-    },
-    img: {
-      type: "object",
-      default: {
-        src: "https://i.picsum.photos/id/1/200/200.jpg",
-        alt: "Img alt"
-      }
-    }
-  },
-  edit: block,
-  save: block
+  if (cards) {
+    console.log('cards', cards);
+    Array.from(cards).forEach(function (card) {
+      var attributes = JSON.parse(card.dataset.mtAttributes);
+      react_dom__WEBPACK_IMPORTED_MODULE_2___default.a.hydrate(Object(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__["createElement"])(_component_src_UserCard__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        attributes: attributes
+      }), card);
+    });
+  }
 });
-
-/***/ }),
-
-/***/ "@wordpress/blocks":
-/*!*****************************************!*\
-  !*** external {"this":["wp","blocks"]} ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-(function() { module.exports = this["wp"]["blocks"]; }());
 
 /***/ }),
 
@@ -329,16 +290,27 @@ Object(_wordpress_blocks__WEBPACK_IMPORTED_MODULE_2__["registerBlockType"])("mt/
 
 /***/ }),
 
-/***/ "@wordpress/i18n":
-/*!***************************************!*\
-  !*** external {"this":["wp","i18n"]} ***!
-  \***************************************/
+/***/ "react":
+/*!*********************************!*\
+  !*** external {"this":"React"} ***!
+  \*********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-(function() { module.exports = this["wp"]["i18n"]; }());
+(function() { module.exports = this["React"]; }());
+
+/***/ }),
+
+/***/ "react-dom":
+/*!************************************!*\
+  !*** external {"this":"ReactDOM"} ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+(function() { module.exports = this["ReactDOM"]; }());
 
 /***/ })
 
 /******/ });
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=front.js.map

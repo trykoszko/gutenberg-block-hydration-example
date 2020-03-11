@@ -1,0 +1,106 @@
+/* User card */
+.c-mt-user-card {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  background-color: lavender;
+}
+
+.c-mt-user-card__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  padding: 20px;
+
+  width: auto;
+}
+
+.c-mt-user-card__image {
+  width: 120px;
+  height: 80px;
+
+  margin: 0;
+  padding: 20px;
+}
+
+.c-mt-user-card__image img {
+  width: 100%;
+  height: 80px;
+}
+
+.c-mt-user-card__name {
+  font-size: 2rem;
+  margin: 0 0 20px 0;
+}
+
+.c-mt-user-card__cta {
+  cursor: pointer;
+}
+
+/* User card modal */
+.c-mt-modal {
+  display: none;
+}
+
+.c-mt-modal--open {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.c-mt-modal__wrapper {
+  position: relative;
+
+  max-width: 500px;
+  height: auto;
+
+  background-color: white;
+
+  padding: 60px;
+
+  text-align: center;
+}
+
+.c-mt-modal__close {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+
+  cursor: pointer;
+}
+
+.c-mt-modal__image {
+  width: 200px;
+  height: 200px;
+
+  margin: 0 auto;
+  padding: 0;
+}
+
+.c-mt-modal__image img {
+  border-radius: 50%;
+}
+
+.c-mt-modal__name {
+  font-size: 2.5rem;
+  margin: 20px 0;
+}
+
+.c-mt-modal__desc {
+  line-height: 1.75;
+  margin: 0;
+}
