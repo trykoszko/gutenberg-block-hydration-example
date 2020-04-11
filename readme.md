@@ -8,6 +8,4 @@
 - https://github.com/WordPress/gutenberg-examples
 
 ### Author:
-Michał Trykoszko
-https://www.linkedin.com/in/michal-trykoszko/
-trykoszkom@gmail.com
+Michał Trykoszko / trykoszkom@gmail.com / https://www.linkedin.com/in/michal-trykoszko/
